@@ -1,14 +1,15 @@
 const mongoose = require ('mongoose');
-const Schema   = mongoose.Schema;
-//no puseel passport, no siento que sea necesario en este modelo
+const Schema = mongoose.Schema;
 
 const appointmentSchema = new Schema({
-   client_id: {
-       type: ObjectId,
+   _client: {
+       type: Schema.Types.ObjectId,
+       ref: "User",
        require: true
    },
-   doctor_id: {
-       type: ObjectId,
+   _doctor: {
+       type: Schema.Types.ObjectId,
+       ref: "User",
        require: true
    } ,
     date: {
@@ -23,4 +24,4 @@ const appointmentSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model("Appointment", userSchema);
+module.exports = mongoose.model("Appointment", appointmentSchema);
