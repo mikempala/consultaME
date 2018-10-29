@@ -22,6 +22,11 @@ const appointmentSchema = new Schema({
     cost: {
        type: Number
     }
+},{
+    timestamps: {
+        createdAt: "created_at",
+        updatedAt: "updated_at"
+    }
 });
 
 module.exports = mongoose.model("Appointment", appointmentSchema);
