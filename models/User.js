@@ -27,7 +27,7 @@ const userSchema= new Schema ({
         require: true
     },
     birthday: {
-        type:date,
+        type: Date,
         require: true
     },
     telephone: {
@@ -42,8 +42,13 @@ const userSchema= new Schema ({
         state: String,
         zip_code: Number
     }
+},{
+    timestamps: {
+        createdAt: "created_at",
+        updatedAt: "updated_at"
+    }
 });
 
-userSchema.plugin(passportLocalMongoose, {usernamefield: 'email'});
+userSchema.plugin(passportLocalMongoose, { usernameField: 'email'}); // Username Field specified that we're going to use "emai" as the "username" for logging in
 
 module.exports = mongoose.model("User", userSchema);
