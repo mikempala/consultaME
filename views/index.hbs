@@ -1,2 +1,101 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+
+<form action="/logout" method="post">
+  <button type="submit">Logout</button>
+</form>
+
+<form action="/login" method="post">
+    <div>
+        <label for="">
+            Email:
+            <input type="email" name="email">
+        </label>
+    </div>
+
+    <div>
+        <label for="">
+            Password:
+            <input type="password" name="password">
+        </label>
+    </div>
+
+    <button type="submit">Login</button>
+</form>
+
+<form action="/register" method="post">
+    <div>
+        <label for="">
+            Email:
+            <input type="email" name="email">
+        </label>
+    </div>
+    <div>
+        <label for="">
+            Password:
+            <input type="password" name="password">
+        </label>
+    </div>
+    <div>
+        <label for="">
+            Confirm password:
+            <input type="password" name="confirmPassword">
+        </label>
+    </div>
+    <div>
+        <label for="">
+            name:
+            <input type="text" name="name">
+        </label>
+    </div>
+        <div>
+        <label for="">
+            surname:
+            <input type="text" name="surname">
+        </label>
+    </div>
+        <div>
+        <label for="">
+            birthday:
+            <input type="date" name="birthday">
+        </label>
+    </div>
+        <div>
+        <label for="">
+            telephone:
+            <input type="number" name="telephone">
+        </label>
+    </div>
+        <div>
+        <label for="">
+            street:
+            <input type="text" name="street">
+        </label>
+    </div>
+        <div>
+        <label for="">
+            district:
+            <input type="text" name="district">
+        </label>
+    </div>
+        <div>
+        <label for="">
+            city:
+            <input type="text" name="city">
+        </label>
+    </div>
+        <div>
+        <label for="">
+            state:
+            <input type="text" name="state">
+        </label>
+    </div>
+        <div>
+        <label for="">
+            zip_code:
+            <input type="number" name="zip_code">
+        </label>
+    </div>
+
+    <button type="submit">Register</button>
+</form>

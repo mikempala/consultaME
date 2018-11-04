@@ -40,7 +40,7 @@ const userSchema= new Schema ({
         district: String,
         city: String,
         state: String,
-        zip_code: Number
+        zip_code: String
     }
 },{
     timestamps: {

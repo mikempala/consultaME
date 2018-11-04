@@ -9,9 +9,8 @@ const appointmentSchema = new Schema({
    },
    _doctor: {
        type: Schema.Types.ObjectId,
-       ref: "User",
-       require: true
-   } ,
+       ref: "User"
+   },
     date: {
        type: Date,
        require: true
