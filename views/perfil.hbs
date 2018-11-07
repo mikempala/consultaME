@@ -1,5 +1,16 @@
-<hr>
-<br><br>
+<img src="{{user.profile_pic}}" alt="{{user.name}} {{user.surname}}">
+<form action="/perfil/edit" method="post" enctype="multipart/form-data">
+    <div>
+        <label for="">
+            Upload new image:
+            <input type="file" name="profile_pic">
+        </label>
+    </div>
+    <button type="submit">Update</button>
+</form>
+
+<br><hr><br>
+
 <form action="/perfil/edit" method="post">
     <div>
         <label for="">
@@ -13,49 +24,49 @@
             <input type="text" name="name" value="{{user.name}}">
         </label>
     </div>
-        <div>
+    <div>
         <label for="">
             surname:
             <input type="text" name="surname" value="{{user.surname}}">
         </label>
     </div>
-        <div>
+    <div>
         <label for="">
             birthday:
             <input type="date" name="birthday" value="{{birthday}}">
         </label>
     </div>
-        <div>
+    <div>
         <label for="">
             telephone:
             <input type="number" name="telephone" value="{{user.telephone}}">
         </label>
     </div>
-        <div>
+    <div>
         <label for="">
             street:
             <input type="text" name="street" value="{{user.address.street}}">
         </label>
     </div>
-        <div>
+    <div>
         <label for="">
             district:
             <input type="text" name="district" value="{{user.address.district}}">
         </label>
     </div>
-        <div>
+    <div>
         <label for="">
             city:
             <input type="text" name="city" value="{{user.address.city}}">
         </label>
     </div>
-        <div>
+    <div>
         <label for="">
             state:
             <input type="text" name="state" value="{{user.address.state}}">
         </label>
     </div>
-        <div>
+    <div>
         <label for="">
             zip_code:
             <input type="number" name="zip_code" value="{{user.address.zip_code}}">
@@ -66,5 +77,5 @@
 </form>
 
 <form action="/perfil/delete" method="POST">
-  <button type="submit">Delete</button>
+    <button type="submit">Delete</button>
 </form>

@@ -2,6 +2,7 @@ const express = require('express');
 const router  = express.Router();
 const User = require("../models/User");
 const commonMiddlewares = require("../helpers/commonMiddlewares");
+const upload = require("../helpers/multer");
 const moment = require('moment');
 
 // Confirms the user's profile
@@ -21,7 +22,9 @@ router.get("/", commonMiddlewares.isLoggedIn, (req, res) => {
 });
 
 // Edit profile
-router.post("/edit", commonMiddlewares.isLoggedIn, (req, res) => {
+router.post("/edit", commonMiddlewares.isLoggedIn, upload.single('profile_pic'), (req, res) => {
+  req.body.profile_pic = req.file.url // Uploads the image and updates the user's photo
+
   User.findByIdAndUpdate(req.user._id, { $set: req.body })
   .then(() => {
     res.redirect('/perfil');
