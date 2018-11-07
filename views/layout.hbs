@@ -1,16 +1,197 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>{{title}}</title>
-  <link rel="stylesheet" href="/stylesheets/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
 </head>
+
 <body>
+<div class="ui  secondary pointing stackable menu  ">
+    <a class="active item">
+        Home
+    </a>
+    <a class="item">
+        Appointment
+    </a>
+    <a class="item">
+        Profile
+    </a>
+    <div class="right menu colum">
+        <div class="item">
+            <div class="ui icon input">
+                <input type="text" placeholder="Search...">
+                <i class="search link icon"></i>
+            </div>
+        </div>
+        <a class="ui item" id='login'>
+            Login
+        </a>
+    </div>
+</div>
 
-  {{{body}}}
+<div class="ui modal login">
+    <i class="close icon"></i>
+    <div class="header">
+        Welcome
+    </div>
 
-  <script src="/javascripts/script.js"></script>
+    <div class="ui top attached tabular menu">
+        <a class="item active" data-tab="first">
+            Login
+        </a>
+        <a class="item"         data-tab="second">
+            Register
+        </a>
+    </div>
+
+    <div class="ui bottom attached tab segment active" data-tab="first">
+        <div class="ui middle  aligned center aligned grid">
+            <div class="nine wide  column">
+                <form class="ui form" action="/login" method="post">
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="email" placeholder="email:">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="key icon"></i>
+                            <input type="password" name="password" placeholder="password">
+                        </div>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="ui bottom attached tab segment" data-tab="second">
+
+        <form class="ui form" action="/register" method="post">
+        <h4 class="ui dividing header"> Información cuenta</h4>
+        <div class="field">
+            <label for="">
+                Email:
+                <input type="email" name="email">
+            </label>
+
+            <div>
+                <label for="">
+                    Password:
+                    <input type="password" name="password">
+                </label>
+            </div>
+            <div>
+                <label for="">
+                    Confirm password:
+                    <input type="password" name="confirmPassword">
+                </label>
+            </div>
+        </div>
+        <h4 class="ui dividing header"> Información personal</h4>
+        <div class="four fields">
+            <div class="field">
+                <label for="">
+                    name:
+                    <input type="text" name="name">
+                </label>
+            </div>
+            <div class="field">
+                <label for="">
+                    surname:
+                    <input type="text" name="surname">
+                </label>
+            </div>
+            <div class="field">
+                <label for="">
+                    birthday:
+                    <input type="date" name="birthday">
+                </label>
+            </div>
+            <div class="field">
+                <label for="">
+                    telephone:
+                    <input type="number" name="telephone">
+                </label>
+            </div>
+        </div>
+        <div class="five fields">
+            <div class="field">
+                <label for="">
+                    street:
+                    <input type="text" name="street">
+                </label>
+            </div>
+            <div class="field">
+                <label for="">
+                    district:
+                    <input type="text" name="district">
+                </label>
+            </div>
+            <div class="field">
+                <label for="">
+                    city:
+                    <input type="text" name="city">
+                </label>
+            </div>
+            <div class="field">
+                <label for="">
+                    state:
+                    <input type="text" name="state">
+                </label>
+            </div>
+            <div class="field">
+                <label for="">
+                    zip_code:
+                    <input type="number" name="zip_code">
+                </label>
+            </div>
+        </div>
+            <button class="ui primary button" type="submit">Register</button>
+    </form>
+        <br>
+        <div class="actions">
+            <div class="ui red deny button">
+                Exit
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+
+<script>
+    $(function(){
+        $("#login").click(function(){
+            $(".login").modal('show');
+        });
+        $(".login").modal({
+            closable: true
+        });
+        $('.menu .item')
+                .tab()
+        ;
+
+    });
+</script>
+
 </body>
 </html>
+
+
+
