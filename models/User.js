@@ -41,6 +41,11 @@ const userSchema= new Schema ({
         city: String,
         state: String,
         zip_code: String
+    },
+    status: {
+        type: String,
+        enum: ["Pending Confirmation", "Active"],
+        default: "Pending Confirmation"
     }
 },{
     timestamps: {
@@ -49,6 +54,6 @@ const userSchema= new Schema ({
     }
 });
 
-userSchema.plugin(passportLocalMongoose, { usernameField: 'email'}); // Username Field specified that we're going to use "emai" as the "username" for logging in
+userSchema.plugin(passportLocalMongoose, { usernameField: 'email'}); // Username Field specified that we're going to use "email" as the "username" for logging in
 
 module.exports = mongoose.model("User", userSchema);

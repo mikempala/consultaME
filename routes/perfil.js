@@ -4,6 +4,14 @@ const User = require("../models/User");
 const commonMiddlewares = require("../helpers/commonMiddlewares");
 const moment = require('moment');
 
+// Confirms the user's profile
+router.get("/confirm/:id", (req, res) => {
+  let confirmCode = decodeURIComponent(req.params.id);
+
+  User.findOneAndUpdate(confirmCode, {"status": "Active"})
+  .then(user => res.render("confirm", { user }));
+});
+
 // Displays the user's profile
 router.get("/", commonMiddlewares.isLoggedIn, (req, res) => {
   let user = req.user;
@@ -15,7 +23,7 @@ router.get("/", commonMiddlewares.isLoggedIn, (req, res) => {
 // Edit profile
 router.post("/edit", commonMiddlewares.isLoggedIn, (req, res) => {
   User.findByIdAndUpdate(req.user._id, { $set: req.body })
-  .then(user => {
+  .then(() => {
     res.redirect('/perfil');
   })
   .catch(err => {
@@ -28,7 +36,7 @@ router.post("/edit", commonMiddlewares.isLoggedIn, (req, res) => {
 // Delete profile
 router.post("/delete", commonMiddlewares.isLoggedIn, (req, res) => {
   User.findByIdAndDelete(req.user._id, { $set: req.body })
-  .then(user => {
+  .then(() => {
     res.redirect('/');
   })
   .catch(err => {
@@ -38,4 +46,4 @@ router.post("/delete", commonMiddlewares.isLoggedIn, (req, res) => {
   })
 });
 
-module.exports = router;  
+module.exports = router;
