@@ -6,7 +6,7 @@ const userSchema= new Schema ({
     email: {
         type: String,
         require: true,
-        unique:true
+        unique: true
     },
     rol: {
         type: String,
@@ -46,7 +46,9 @@ const userSchema= new Schema ({
         type: String,
         enum: ["Pending Confirmation", "Active"],
         default: "Pending Confirmation"
-    }
+    },
+    facebookID: String,
+    facebookAccessToken: String,
 },{
     timestamps: {
         createdAt: "created_at",
