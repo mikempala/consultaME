@@ -21,4 +21,9 @@ $(function() {
         $(".navbar-nav").find(".activa").removeClass("activa");
         $(this).addClass("activa");
     });
+
+    if (page=='perfil'){
+        console.log('esta en la pagina perfil');
+        $("#logout").removeClass('hide');
+    }
 });
