@@ -64,8 +64,10 @@ app.locals.title = 'consultaME';
 const index = require('./routes/index');
 const perfil = require('./routes/perfil');
 const cita = require('./routes/cita');
+const admin = require('./routes/admin');
 app.use('/', index);
 app.use('/perfil', perfil);
-app.use('/cita', cita); 
+app.use('/cita', cita);
+app.use('/admin', admin);
 
 module.exports = app;
