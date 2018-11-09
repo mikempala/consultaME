@@ -1,81 +1,91 @@
-<img src="{{user.profile_pic}}" alt="{{user.name}} {{user.surname}}">
-<form action="/perfil/edit" method="post" enctype="multipart/form-data">
-    <div>
-        <label for="">
-            Upload new image:
-            <input type="file" name="profile_pic">
-        </label>
-    </div>
-    <button type="submit">Update</button>
-</form>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12  ">
+            <img src="{{user.profile_pic}}" alt="{{user.name}} {{user.surname}}" width="120" height="90">
+            <form action="/perfil/edit" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="">
+                        Subir una nueva imagen:
+                        <input type="file" name="profile_pic">
+                    </label>
+                </div>
+                <button class="btn btn-success" type="submit">Actualizar</button>
+            </form>
 
-<br><hr><br>
+            <br><hr><br>
+        </div>
+        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12  ">
 
-<form action="/perfil/edit" method="post">
-    <div>
-        <label for="">
-            Email:
-            <input type="email" name="email" value="{{user.email}}">
-        </label>
-    </div>
-    <div>
-        <label for="">
-            name:
-            <input type="text" name="name" value="{{user.name}}">
-        </label>
-    </div>
-    <div>
-        <label for="">
-            surname:
-            <input type="text" name="surname" value="{{user.surname}}">
-        </label>
-    </div>
-    <div>
-        <label for="">
-            birthday:
-            <input type="date" name="birthday" value="{{birthday}}">
-        </label>
-    </div>
-    <div>
-        <label for="">
-            telephone:
-            <input type="number" name="telephone" value="{{user.telephone}}">
-        </label>
-    </div>
-    <div>
-        <label for="">
-            street:
-            <input type="text" name="street" value="{{user.address.street}}">
-        </label>
-    </div>
-    <div>
-        <label for="">
-            district:
-            <input type="text" name="district" value="{{user.address.district}}">
-        </label>
-    </div>
-    <div>
-        <label for="">
-            city:
-            <input type="text" name="city" value="{{user.address.city}}">
-        </label>
-    </div>
-    <div>
-        <label for="">
-            state:
-            <input type="text" name="state" value="{{user.address.state}}">
-        </label>
-    </div>
-    <div>
-        <label for="">
-            zip_code:
-            <input type="number" name="zip_code" value="{{user.address.zip_code}}">
-        </label>
-    </div>
+            <form action="/perfil/edit" method="post">
+                <div>
+                    <label for="">
+                        Email:
+                        <input type="email" name="email" value="{{user.email}}">
+                    </label>
+                </div>
+                <div>
+                    <label for="">
+                        name:
+                        <input type="text" name="name" value="{{user.name}}">
+                    </label>
+                </div>
+                <div>
+                    <label for="">
+                        surname:
+                        <input type="text" name="surname" value="{{user.surname}}">
+                    </label>
+                </div>
+                <div>
+                    <label for="">
+                        birthday:
+                        <input type="date" name="birthday" value="{{birthday}}">
+                    </label>
+                </div>
+                <div>
+                    <label for="">
+                        telephone:
+                        <input type="number" name="telephone" value="{{user.telephone}}">
+                    </label>
+                </div>
+                <div>
+                    <label for="">
+                        street:
+                        <input type="text" name="street" value="{{user.address.street}}">
+                    </label>
+                </div>
+                <div>
+                    <label for="">
+                        district:
+                        <input type="text" name="district" value="{{user.address.district}}">
+                    </label>
+                </div>
+                <div>
+                    <label for="">
+                        city:
+                        <input type="text" name="city" value="{{user.address.city}}">
+                    </label>
+                </div>
+                <div>
+                    <label for="">
+                        state:
+                        <input type="text" name="state" value="{{user.address.state}}">
+                    </label>
+                </div>
+                <div>
+                    <label for="">
+                        zip_code:
+                        <input type="number" name="zip_code" value="{{user.address.zip_code}}">
+                    </label>
+                </div>
 
-    <button type="submit">Update</button>
-</form>
+                <button  class="btn btn-success" type="submit">actualizar </button>
+            </form>
+            <br>
+            <form action="/perfil/delete" method="POST">
+                <button  class="btn btn-danger" type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
 
-<form action="/perfil/delete" method="POST">
-    <button type="submit">Delete</button>
-</form>
+
