@@ -6,16 +6,16 @@ exports.isLoggedIn = (req, res, next) => {
 };
 
 exports.isAdmin = (req, res, next) => {
-  if (req.isAuthenticated() && req.user.role === admin ) return next();
+  if (req.isAuthenticated() && req.user.role === "admin" ) return next();
   return res.render("index", { msg: "Necesitas ser administrador para poder acceder" });
 };
 
 exports.isDoctor = (req, res, next) => {
-  if (req.isAuthenticated() && req.user.role === doctor ) return next();
+  if (req.isAuthenticated() && req.user.role === "doctor" ) return next();
   return res.render("index", { msg: "Necesitas ser doctor para acceder" });
 };
 
 exports.isSecretary = (req, res, next) => {
-  if (req.isAuthenticated() && req.user.role === secretary ) return next();
+  if (req.isAuthenticated() && req.user.role === "secretary" ) return next();
   return res.render("index", { msg: "Necesitas ser secretaria/secretario para acceder" });
 };

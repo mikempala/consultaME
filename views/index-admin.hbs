@@ -1,0 +1,31 @@
+<h3>Existing users:</h3>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Role</th>
+    <th>Actions</th>
+  </tr>
+
+  {{#each users}}
+  <tr>
+    <th>{{name}} {{surname}}</th>
+    <th>{{email}}</th>
+    <th>{{role}}</th>
+    <th><a href="/admin/perfil/delete/{{_id}}">Delete</a></th>
+    <th><a href="/admin/perfil/edit/{{_id}}">Edit</a></th>
+    <th><a href="/admin/perfil/citas/{{_id}}">View Appointments</a></th>
+  </tr>
+  {{/each}}
+
+  {{#each appointments}}
+  <tr>
+    <th>{{requester}}</th>
+    <th>{{doctor}}</th>
+    <th>{{role}}</th>
+    <th><a href="/admin/perfil/delete/{{_id}}">Delete</a></th>
+    <th><a href="/admin/perfil/edit/{{_id}}">Edit</a></th>
+    <th><a href="/admin/perfil/citas/{{_id}}">View Appointments</a></th>
+  </tr>
+  {{/each}}
+</table>
