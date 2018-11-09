@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 $(function() {
-    console.log('entro');
+    console.log('entro al js principal');
 
     $(".navbar-nav a").on("click", function () {
         console.log("entro activa");
