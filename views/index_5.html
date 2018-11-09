@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="Login">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto:500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <title>Login</title>
+</head>
+<body>
+
+<nav id='nav' class="navbar navbar-light navbar-expand-lg   shadow-lg p-3 mb-5   rounded" >
+    <a class="navbar-brand  " id="linkhome" title="Grillos" href="">
+        <img  src="https://res.cloudinary.com/consultame/image/upload/v1541678575/img/logos/logo_consultame-03.png"  class="mx-auto img-fluid" alt="" width="93" height="106" />
+    </a>
+    <button class="navbar-toggler" style="color: black" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active ">
+                <a class="nav-link txtNavbar  activa " id="linkIndex" href="index"  style="color: #3BD0AB">  Inicio  </a>
+            </li>
+            <li class="nav-item active ">
+                <a class="nav-link  txtNavbar  " id="linkCita"  href="#servicios" >  Servicios</a>
+            </li>
+            <li class="nav-item active ">
+                <a class="nav-link  txtNavbar  " id="linkCita"  href="#comoFun" >  Como funciona?</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link  txtNavbar  " id="linkPerfil" href="#contacyo" > Contáctanos     </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link  txtNavbar  " id="linkPerfil" href="#faq" > FAQ     </a>
+            </li>
+        </ul>
+        <ul class="ml-auto my-2 my-lg-0"  style="list-style: none" >
+            <li class="nav-item ">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-user fa-3x"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--carousel-->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="https://res.cloudinary.com/consultame/image/upload/v1541642451/img/carousel/agendar.jpg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block ">
+                <h5 class="txTitCaro">Agenda</h5>
+                <p>Agendar en línea a través del portal web desde tu pc o dispositivo movil</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://res.cloudinary.com/consultame/image/upload/v1541642450/img/carousel/acudir.jpg" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block" >
+                <h5 class="txTitCaro">Acude</h5>
+                <p>Una vez que agendaste en línea, acude a tu cita sin largos tiempos de espera</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://res.cloudinary.com/consultame/image/upload/v1541642452/img/carousel/cita.jpg" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="txTitCaro">Cita</h5>
+                <p>La información de tu consulta queda almacenado digitalmente par un mejor seguimiento</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://res.cloudinary.com/consultame/image/upload/v1541642452/img/carousel/expediente.jpg" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="txTitCaro">Expediente</h5>
+                <p>Lleva un seguimiento adecuado de tu expediente a tráves del registro digital e historial clínico </p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://res.cloudinary.com/consultame/image/upload/v1541666685/img/carousel/calendario.png" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="txTitCaro">Revisa</h5>
+                <p>Que no se te pase tu cita, revisa el calendario  de citas </p>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+<section class="servicios" id="servicios">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <br><br>
+                <p class="titulo">   Servicios  </p>
+                <br><br>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-sm-center "> <i class="fas fa-calendar-alt fa-5x"></i>
+
+                <h3>Agendar</h3>
+                <p class="txparGris p-3">
+                    Agenda tus consultas mediante la plataforma web de manera simple y rápida, verifica la disponibilidad de tu médico.
+                </p>
+
+            </div>
+            <div class="col-md-4 text-sm-center   "> <i class="fas fa-bell fa-5x"></i>
+
+                <h3>Notificar   </h3>
+                <p class="txparGris p-3">
+                    Recibe las notificaciones de tus citas a través del correo electrónico para que no se te pase acudir
+                </p>
+
+            </div>
+            <div class="col-md-4 text-sm-center   "> <i class="fas fa-laptop fa-5x"></i>
+
+                <h3>Consultar</h3>
+                <p class="txparGris p-3">
+                    Consulta en la pagina web tu expediente digital, historial médico, consultas, todo tu historial a tu alcance.
+                </p>
+
+            </div>
+        </div>
+        <br><br>
+
+    </div>
+</section>
+
+<section id="faq" style="background-color: #3BD0AB" class="px-5  ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12  ">
+                <p class="titfaq">   Expediente</p>
+                <a href="#funcita"   class="textfaq " >  ¿Cómo funciona? </a> <br>
+                <a href="#confcita"   class="textfaq " >  Confirmar una cita </a><br>
+                <a href="#vercita"   class="textfaq " >  visualizar mi cita? </a><br>
+                <a href="#histcita"   class="textfaq " >  Historial de citas </a><br>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12   ">
+                <p class="titfaq">   Agendar</p>
+                <a href="#funcita"   class="textfaq " >  ¿Cómo funciona? </a> <br>
+                <a href="#confcita"   class="textfaq " >  Confirmar una cita </a><br>
+                <a href="#vercita"   class="textfaq " >  visualizar mi cita? </a><br>
+                <a href="#histcita"   class="textfaq " >  Historial de citas </a><br>
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12   ">
+                <p class="titfaq">  Notificaciones </p>
+                <a href="#funcita"   class="textfaq " >  ¿Cómo funciona? </a> <br>
+                <a href="#confcita"   class="textfaq " >  Confirmar una cita </a><br>
+                <a href="#vercita"   class="textfaq " >  visualizar mi cita? </a><br>
+                <a href="#histcita"   class="textfaq " >  Historial de citas </a><br>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">  Bienvenido</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="home" aria-selected="true">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#register" role="tab" aria-controls="contact" aria-selected="false">Registrar</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                        <i class="fas fa-user fa-3x"></i>
+                        <form action="/login" method="post">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Correo</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduce el correo">
+                            <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                        <i class="fab fa-wpforms fa-3x"></i>
+                        <form  action="/register" method="post">
+                            <h4 class="ui dividing header " style="color: grey "> Información cuenta</h4>
+                            <div  >
+                                <label for="">
+                                    Email:
+                                    <input type="email" name="email">
+                                </label>
+
+                                <div>
+                                    <label for="">
+                                        Password:
+                                        <input type="password" name="password">
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="">
+                                        Confirm password:
+                                        <input type="password" name="confirmPassword">
+                                    </label>
+                                </div>
+                            </div>
+                            <h4  style="color: grey"> Información personal</h4>
+                            <div  >
+                                <div  >
+                                    <label for="">
+                                        name:
+                                        <input type="text" name="name">
+                                    </label>
+                                </div>
+                                <div  >
+                                    <label for="">
+                                        surname:
+                                        <input type="text" name="surname">
+                                    </label>
+                                </div>
+                            </div>
+
+                                <div  >
+                                    <label for="">
+                                        birthday:
+                                        <input type="date" name="birthday">
+                                    </label>
+                                </div>
+                                <div  >
+                                    <label for="">
+                                        telephone:
+                                        <input type="number" name="telephone">
+                                    </label>
+                                </div>
+
+                                <div  >
+                                    <label for="">
+                                        street:
+                                        <input type="text" name="street">
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="">
+                                        district:
+                                        <input type="text" name="district">
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="">
+                                        city:
+                                        <input type="text" name="city">
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="">
+                                        state:
+                                        <input type="text" name="state">
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="">
+                                        zip_code:
+                                        <input type="number" name="zip_code">
+                                    </label>
+                                </div>
+
+                    <button type="submit" class="btn btn-success">registrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script src="../public/javascripts/script.js"></script>
+</body>
+</html>

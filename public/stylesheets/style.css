@@ -1,3 +1,72 @@
+
+body{
+
+    font-family: 'Roboto', sans-serif;
+    color: #3BD0AB;
+    font-weight: 600 !important;
+    font-size: 1rem;
+}
+
+.titulo{
+    font-size: 70px;
+    text-align:center;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.carousel-caption{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    text-shadow: 1px 1px 1px #202123;
+
+}
+
+.txtNavbar{
+    color: #3BD0AB !important;;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600 !important;
+    /*text-shadow: 1px 1px 1px #7c7f87;*/
+}
+
+
+.txTitCaro{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 600 !important;
+    text-shadow: 1px 1px 1px #202123;
+}
+
 .column {
     max-width: 450px;
 }
+
+.activa{
+    color: white !important;
+    background-color: #3BD0AB;
+    transform: translateY(-5px);
+    text-decoration: none;
+    border-bottom: 0px solid blue;
+    border-bottom-color: lightgreen;
+    transition: .25s ease-in;
+
+}
+
+.txparGris{
+    background-color: #3BD0AB;
+    color: white;
+    text-align: justify;
+    font-size: 1rem;
+
+}
+.textfaq{
+    text-align: right !important;
+    text-decoration: none;
+    color: white !important;
+    font-size: 1.1rem;
+}
+.titfaq{
+    text-align: left;
+    color: white;
+    font-size: 2.5rem;
+}
+
