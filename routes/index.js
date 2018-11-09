@@ -2,7 +2,6 @@ const express = require('express');
 const router  = express.Router();
 const passport = require("passport");
 const User = require("../models/User");
-const commonMiddlewares = require("../helpers/commonMiddlewares");
 const sgMail = require('@sendgrid/mail');
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -48,7 +47,7 @@ router.post("/register", (req, res) => {
           <div style="width: 80%;      max-width: 800px;      font-weight: 300;      margin: 0 auto;      background-color: white;      border-radius: 15px;      padding: 15px;      padding-bottom: 15px;">
             <h1 style="font-size: 24px; font-weight: 100;">Confirmación de Email</h1>
             <p style="font-size: 18px; line-height: 1.5;">¡Hola! <br><br> Muchas gracias por usar consultaME. Para poder agendar citas, tendrás que activar tu cuenta dando click al botón de abajo</p>
-            <a href="http://localhost:3000/perfil/confirm/${encodeCode}" style="padding: 15px;        font-family: 'Helvetica Neue', Helvetica; text-size: 18px; color: white; background-color: #52C3FB; border: 0; border-radius: 5px; margin: 10px; display: block; max-width: 200px; margin: auto; text-decoration: none;">Confirmar Correo</a>
+            <a href="https://consultame-app.herokuapp.com/perfil/confirm/${encodeCode}" style="padding: 15px;        font-family: 'Helvetica Neue', Helvetica; text-size: 18px; color: white; background-color: #52C3FB; border: 0; border-radius: 5px; margin: 10px; display: block; max-width: 200px; margin: auto; text-decoration: none;">Confirmar Correo</a>
             <hr style="width: 50%; margin-top: 5%">
             <p style="line-height: 1.5;">¡Muchas gracias!</p>
             <p style="font-size: 14px">Equipo consultaME</p>
@@ -63,6 +62,14 @@ router.post("/register", (req, res) => {
     })
     .catch(err => console.log(err));
 });
+
+// Facebook register
+router.get("/auth/facebook", passport.authenticate("facebook"));
+router.get("/auth/facebook/callback", passport.authenticate("facebook", {
+  successRedirect: "/profile",
+  failureRedirect: "/",
+  scope: ['profile_pic', 'email', 'birthday']
+}));
 
 // Logout
 router.post("/logout", (req, res) => {
