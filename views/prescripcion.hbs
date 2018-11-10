@@ -1,13 +1,28 @@
-<h1>Expediente</h1>
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+<div class="container-fluid expediente">
+    <div class="row  p-5">
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12   ">
+        </div>
+        <div class="col-xl-10 col-lg-10 col-md-4 col-sm-12 col-12   ">
+        <h1 class="tit-txt-expediente"  >Expediente</h1>
 
 
-<li>
-    {{#each appointments}}
-    <ul><a href="/expediente/{{_id}}">{{date}}</a></ul>
-    {{/each}}
-</li>
+        <li>
+            {{#each appointments}}
+            <ul><a href="/expediente/{{_id}}">{{date}}</a></ul>
+            {{/each}}
+        </li>
 
-{{#each appointment}}
-    <h2>Prescripción: </h2> <p>{{prescription}}</p>
-    <h2>Notas: </h2> <p>{{notes}}</p>
-{{/each}}
+        {{#each appointment}}
+            <h2>Prescripción: </h2> <p>{{prescription}}</p>
+            <h2>Notas: </h2> <p>{{notes}}</p>
+        {{/each}}
+        </div>
+    </div>
+</div>
+    <script>
+    var session=true;
+</script>
+
+

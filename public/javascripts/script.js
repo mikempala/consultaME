@@ -7,7 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 $(function() {
-    console.log('entro al js principal');
+    if (session==true){
+        console.log('esta en la pagina perfil');
+        $("#logout").removeClass('hide');
+        $("#login").addClass('hide');
+    }
+
+
 
     $(".navbar-nav a").on("click", function () {
         console.log("entro activa");
@@ -22,8 +28,5 @@ $(function() {
         $(this).addClass("activa");
     });
 
-    if (session==true){
-        console.log('esta en la pagina perfil');
-        $("#logout").removeClass('hide');
-    }
+
 });

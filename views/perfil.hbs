@@ -1,116 +1,16 @@
-<ul class="nav nav-tabs pt-5" id="myTab" role="tablist">
+<ul class="nav nav-tabs mt-5 "  id="myTab" role="tablist">
     <li class="nav-item">
-        <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="home" aria-selected="true">Perfil</a>
+        <a class="nav-link active  " id="login-tab" data-toggle="tab" href="/perfil" role="tab" aria-controls="home" aria-selected="true">Perfil</a>
+    </li>
+    <li >
+        <a class="nav-link active" href="/cita" role="button">Citas</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#register" role="tab" aria-controls="contact" aria-selected="false">Citas</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#register" role="tab" aria-controls="contact" aria-selected="false">Expediente</a>
+        <a class="nav-link active" href="/expediente" role="button">Expediente</a>
+
     </li>
 </ul>
-<div class="tab-content" id="myTabContent" >
-    <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 p-3 boxShadow " >
-                    <img  src="{{user.profile_pic}}" alt="{{user.name}} {{user.surname}}" class="rounded mx-auto d-block img-thumbnail"  >
-                    <hr>
-                    <form action="/perfil/edit" method="post" enctype="multipart/form-data">
-                        <div>
-                            <label class="text-center " for="">
-                                Subir una nueva imagen:
-                                <input type="file" name="profile_pic">
-                            </label>
-                        </div>
-                        <button class="btn btn-success" type="submit">Actualizar</button>
-                    </form>
-                </div>
-                <br><br>
-                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 pt-5 boxShadow">
-                    <form action="/perfil/edit" method="post">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12  ">
-                                    <label for="">
-                                        Correo: <br>
-                                        <input type="email" name="email" value="{{user.email}}">
-                                    </label>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12  ">
-                                    <label for="">
-                                        Nombre:<br>
-                                        <input type="text" name="name" value="{{user.name}}">
-                                    </label>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12  ">
-                                    <label for="">
-                                        Apellidos:<br>
-                                        <input type="text" name="surname" value="{{user.surname}}">
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12  ">
-                                    <label for="">
-                                        Cumpleaños:<br>
-                                        <input type="date" name="birthday" value="{{birthday}}">
-                                    </label>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12  ">
-                                    <label for="">
-                                        Teléfono:<br>
-                                        <input type="number" name="telephone" value="{{user.telephone}}">
-                                    </label>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12  ">
-                                    <label for="">
-                                        Calle:<br>
-                                        <input type="text" name="street" value="{{user.address.street}}">
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12  ">
-                                    <label for="">
-                                        Distrito:<br>
-                                        <input type="text" name="district" value="{{user.address.district}}">
-                                    </label>
-                                </div>
-                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12  ">
-                                    <label for="">
-                                        Ciudad:<br>
-                                        <input type="text" name="city" value="{{user.address.city}}">
-                                    </label>
-                                </div>
-                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12  ">
-                                    <label for="">
-                                        Estado:<br>
-                                        <input type="text" name="state" value="{{user.address.state}}">
-                                    </label>
-                                </div>
-                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12  ">
-                                    <label for="">
-                                        Código Postal:<br>
-                                        <input type="number" name="zip_code" value="{{user.address.zip_code}}">
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mx-auto">
-                            <button  class="btn btn-success" type="submit">Actualizar </button>
-                        </div>
-                    </form>
-                    <br>
-                    <form action="/perfil/delete" method="POST" >
-                        <button  class="btn btn-danger mr-auto" type="submit">Borrar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
-        <div class="container-fluid">
+      <div class="container-fluid" id="perfil">
             <div class="row">
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 p-3 boxShadow " >
                     <img  src="{{user.profile_pic}}" alt="{{user.name}} {{user.surname}}" class="rounded mx-auto d-block img-thumbnail"  >
@@ -208,9 +108,6 @@
             </div>
         </div>
 
-
-    </div>
-</div>
 
 
 

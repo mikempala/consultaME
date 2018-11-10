@@ -7,6 +7,12 @@ body{
     font-size: 1rem;
 }
 
+.tit-txt-expediente{
+    color: #202123;
+    font-size: 5rem;
+    font-family: 'Indie Flower', cursive;
+}
+
 .titulo{
     font-size: 70px;
     text-align:center;
@@ -95,7 +101,78 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(59, 208, 171, 0.8);
+    background: rgba(59, 208, 171, 0.5);
+    top: 0;
+    left: 0 ;
+}
+
+.nav-tabs .active{
+    color: white !important;
+    background-color: #07e58b !important;
+}
+
+.nav-link{
+    color: white;
+}
+
+.carousel-inner img {
+    width: 100%;
+    max-height: 460px;
+}
+
+.carousel-inner{
+    height: 400px;
+}
+
+.txt-verde{
+    color: #3BD0AB;
+}
+.txt-whiSha{
+    background-color: gray;
+    color: #fff;
+}
+
+.bg-verde{
+    background-color: #3BD0AB;
+}
+
+
+.expediente{
+
+    background-image: url('https://res.cloudinary.com/consultame/image/upload/v1541840255/img/fondos/hoja_raya.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+
+}
+
+.tit-pag-error{
+    text-align: center;
+    color: #fff;
+    font-size: 8rem;
+}
+.text-pag-error{
+    color: #fff;
+    font-size: 3rem;
+}
+
+
+.imgerror{
+
+    background-image: url('https://res.cloudinary.com/consultame/image/upload/v1541839597/img/fondos/paciente.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+
+}
+.imgerror:before{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(59, 208, 171, 0.5);
     top: 0;
     left: 0 ;
 }
