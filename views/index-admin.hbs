@@ -1,38 +1,69 @@
-<h3>Existing users:</h3>
-{{#each users}}
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Role</th>
-    <th>Actions</th>
-  </tr>
-  <tr>
-    <th>{{name}} {{surname}}</th>
-    <th>{{email}}</th>
-    <th>{{role}}</th>
-    <th><a href="/admin/perfil/delete/{{_id}}">Delete</a></th>
-    <th><a href="/admin/perfil/edit/{{_id}}">Edit</a></th>
-    <th><a href="/admin/citas/{{_id}}">View Appointments</a></th>
-  </tr>
-</table>
-{{/each}}
+<div class="container">
+    <div class="row ">
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12  ">
+        </div>
+        <div class="col-xl-8 col-lg-8 col-md-4 col-sm-12 col-12 p-5  " style=" box-sizing: border-box;box-shadow: 5px 5px 5px 0 #eee">
 
-<h3>Existing appointments:</h3>
-{{#each appointments}}
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Date</th>
-    <th>Description</th>
-    <th>Actions</th>
-  </tr>
-  <tr>
-    <th>{{_client.name}} {{_client.surname}}</th>
-    <th>{{date}}</th>
-    <th>{{description}}</th>
-    <th><a href="/doctor/citas/{{_id}}/edit">Edit</a></th>
-    <th><a href="/doctor/citas//{{_id}}/delete">Delete</a></th>
-  </tr>
-</table>
-{{/each}}
+            <h3>Usuarios Existentes:</h3>
+            {{#each users}}
+
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Rol</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{{name}} {{surname}}</td>
+                        <td>{{email}}</td>
+                        <td>{{role}}</td>
+                        <td>
+                            <a  class="btn btn-danger" href="/admin/perfil/delete/{{_id}}">Borrar</a>
+                            <a  class="btn btn-success" href="/admin/perfil/edit/{{_id}}">Editar</a>
+                            <a  class="btn btn-primary" href="/admin/citas/{{_id}}">Ver Citas</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            {{/each}}
+
+            <h3>Citas Existentes:</h3>
+            {{#each appointments}}
+                <table>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Acción</th>
+
+                    </tr>
+                    <tr>
+                        <td>{{_client.name}} {{_client.surname}}</td>
+                        <td>{{date}}</td>
+                        <td>{{description}}</td>
+                        <td>
+                            <a class="btn btn-success"  href="/doctor/citas/{{_id}}/edit">Editar</a>
+                            <a class="btn btn-danger" href="/doctor/citas//{{_id}}/delete">Borrar</a>
+                        </td>
+                    </tr>
+                </table>
+            {{/each}}
+
+
+        </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12  ">
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var session=true;
+</script>
+

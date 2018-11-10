@@ -1,19 +1,70 @@
-<div class="boxShadow">
-    <form action="/doctor/citas/{{id}}/prescripcion/new" method="post">
-        <div>
-            <label for="">
-                Prescription:
-                <input type="text" name="prescription">
-            </label>
-        </div>
 
-        <div>
-            <label for="">
-                Notes:
-                <input type="text" name="notes">
-            </label>
+<div class="container">
+    <div class="row ">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12  ">
         </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 pt-5 ">
+            <div style=" box-sizing: border-box;box-shadow: 5px 5px 5px 0 #eee">
+                <form action="/doctor/citas/{{id}}/prescripcion/new" method="post">
+                    <div>
+                        <label for="">
+                            Prescripcion:
+                            <input type="text" name="prescription">
+                        </label>
+                    </div>
 
-        <button type="submit">New</button>
-    </form>
+                    <div>
+                        <label for="">
+                            Notas:
+                            <input type="text" name="notes">
+                        </label>
+                    </div>
+
+                    <button type="submit">New</button>
+                </form>
+            </div>
+
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12  ">
+        </div>
+    </div>
 </div>
+
+
+<form class="pt-5">
+
+    <input class="rounded mx-auto d-block btn btn-warning" type="button"   value="volver atrás" name="volver atrás2" onclick="history.back()" />
+
+</form>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script>
+    var session=true;
+    $(function() {
+        if (session==true){
+            console.log('esta en la pagina perfil');
+            $("#logout").removeClass('hide');
+            $("#login").addClass('hide');
+        }
+
+
+
+        $(".navbar-nav a").on("click", function () {
+            console.log("entro activa");
+            $(".navbar-nav").find(".activa").removeClass("activa");
+            $(".navbar a").removeClass("activa");
+            $(this).addClass("activa");
+
+        });
+        $(".navbar a").on("click", function () {
+            console.log("entro brand");
+            $(".navbar-nav").find(".activa").removeClass("activa");
+            $(this).addClass("activa");
+        });
+
+
+    });
+</script>
+
+
+
