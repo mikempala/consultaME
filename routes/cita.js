@@ -10,7 +10,10 @@ router.get("/", commonMiddlewares.isLoggedIn, (req, res) => {
   .then((appointments) => {
     res.render("cita", { appointments });
   })
-  .catch(err => console.log(err));
+  .catch(() => {
+    res.status(500);
+    res.render('error');
+  })
 });
 
 // New appointment
@@ -25,10 +28,9 @@ router.post("/new", commonMiddlewares.isLoggedIn, (req, res) => {
       res.redirect("/cita");
       console.log(`Se creo cita ${appointment}`);
     })
-    .catch(err => {
+    .catch(() => {
       res.status(500);
       res.render('error');
-      console.log(err);
     });
 });
 
@@ -38,10 +40,9 @@ router.post("/edit/:id", commonMiddlewares.isLoggedIn, (req, res) => {
   .then(() => {
     res.redirect('/cita');
   })
-  .catch(err => {
+  .catch(() => {
     res.status(500);
     res.render('error');
-    console.log(err);
   })
 });
 

@@ -1,80 +1,77 @@
-<ul class="nav nav-tabs mt-5 "  id="myTab" role="tablist">
+<ul class="nav nav-tabs mt-5 " id="myTab" role="tablist">
     <li class="nav-item">
-        <a class="nav-link active "  role="button" href="/perfil" role="tab" aria-controls="home" aria-selected="true">Perfil</a>
+        <a class="nav-link active " role="button" href="/perfil" role="tab" aria-controls="home" aria-selected="true">Perfil</a>
     </li>
-    <li >
+    <li>
         <a class="nav-link active" href="/cita" role="button">Citas</a> </li>
     <li class="nav-item">
         <a class="nav-link active" href="/expediente" role="button">Expediente</a>
     </li>
 </ul>
 
-    <div class="container-fluid background-calendar">
-        <div class="row">
-            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12   ">
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mt-3  ">
-                <form action="/cita/new" method="post" class="p-2 boxShadow">
-                    <div>
-                        <label for="" class="text-dark">
-                            Fecha:
-                            <input type="datetime-local" name="date">
-                        </label>
-                    </div>
+<div class="container-fluid background-calendar">
+    <div class="row">
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12   ">
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mt-3  ">
+            <form action="/cita/new" method="post" class="p-2 boxShadow">
+                <div>
+                    <label for="" class="text-dark">
+                        Fecha:
+                        <input type="datetime-local" name="date">
+                    </label>
+                </div>
 
-                    <div>
-                        <label for="" class="text-dark">
-                            Descripción de la cita:
-                            <input type="text" name="description">
-                        </label>
-                    </div>
+                <div>
+                    <label for="" class="text-dark">
+                        Descripción de la cita:
+                        <input type="text" name="description">
+                    </label>
+                </div>
 
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-calendar-check"></i>
-                        Guardar</button>
-                </form>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-calendar-check"></i>
+                    Guardar</button>
+            </form>
 
-            </div>
-            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12   ">
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ">
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12   ">
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ">
 
-                <h3 class="txt-whiSha">Editar Cita: </h3>
+            <h3 class="txt-whiSha">Editar Cita: </h3>
 
-                {{#each appointments as |appointment|}}
-                    <form action="/cita/edit/{{appointment._id}}" method="post" class="p-2 boxShadow">
-                        <div>
-                            <label for="" class="text-dark">
-                                Date:
-                                <input type="datetime-local" name="date" value="{{appointment.date}}">
-                            </label>
-                        </div>
+            {{#each appointments as |appointment|}}
+            <form action="/cita/edit/{{appointment._id}}" method="post" class="p-2 boxShadow">
+                <div>
+                    <label for="" class="text-dark">
+                        Date:
+                        <input type="datetime-local" name="date" value="{{appointment.date}}">
+                    </label>
+                </div>
 
-                        <div>
-                            <label for="" class="text-dark">
-                                Description:
-                                <input type="text" name="description" value="{{appointment.description}}">
-                            </label>
-                        </div>
+                <div>
+                    <label for="" class="text-dark">
+                        Description:
+                        <input type="text" name="description" value="{{appointment.description}}">
+                    </label>
+                </div>
 
-                        <button type="submit" class="btn btn-success">
-                            <i class="fas fa-pencil-alt"></i>    Editar
-                        </button>
-                        <br><br>
-                    </form>
-                {{/each}}
+                <button type="submit" class="btn btn-success">
+                    <i class="fas fa-pencil-alt"></i> Editar
+                </button>
+                <br><br>
+            </form>
+            {{/each}}
 
-            </div>
-            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12   ">
-            </div>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-12   ">
         </div>
     </div>
+</div>
 
 
 
 <script>
-    var session=true;
+    var session = true;
 </script>
-
-
-

@@ -5,24 +5,24 @@
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 pt-5  " style=" box-sizing: border-box;box-shadow: 5px 5px 5px 0 #eee">
             <h1>Editar</h1>
             <div class="form-group ">
-            <form action="/doctor/citas/{{appointment._id}}/edit" method="post">
-                <div>
-                    <label for="">
-                        Fecha:
-                        <input type="datetime-local" name="date" value="{{appointment.date}}">
-                    </label>
-                </div>
+                <form action="/doctor/citas/{{appointment._id}}/edit" method="post">
+                    <div>
+                        <label for="">
+                            Fecha:
+                            <input type="datetime-local" name="date" value="{{appointment.date}}">
+                        </label>
+                    </div>
 
-                <div>
-                    <label for="">
-                        Descripción:
-                        <input type="text" name="description" value="{{appointment.description}}">
-                    </label>
-                </div>
+                    <div>
+                        <label for="">
+                            Descripción:
+                            <input type="text" name="description" value="{{appointment.description}}">
+                        </label>
+                    </div>
 
-                <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-save"></i>Guardar </button>
-            </form>
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-save"></i>Guardar </button>
+                </form>
             </div>
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12  ">
@@ -33,10 +33,11 @@
 
 <form class="pt-5">
 
-    <input class="rounded mx-auto d-block btn btn-warning" type="button"   value="volver atrás" name="volver atrás2" onclick="history.back()" />
+    <input class="rounded mx-auto d-block btn btn-warning" type="button" value="volver atrás" name="volver atrás2"
+        onclick="history.back()" />
 
 </form>
 
 <script>
-    var session=true;
+    var session = true;
 </script>

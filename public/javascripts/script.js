@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  console.log('IronGenerator JS imported successfully!');
+    console.log('IronGenerator JS imported successfully!');
 
 }, false);
 
 
 
-$(function() {
-    if (session==true){
+$(function () {
+    if (session == true) {
         console.log('esta en la pagina perfil');
         $("#logout").removeClass('hide');
         $("#login").addClass('hide');

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const passportLocalMongoose = require('passport-local-mongoose');
 
-const userSchema= new Schema ({
+const userSchema = new Schema({
     email: {
         type: String,
         require: true,
@@ -10,7 +10,7 @@ const userSchema= new Schema ({
     },
     role: {
         type: String,
-        enum: ['admin','patient','doctor','secretary'],
+        enum: ['admin', 'patient', 'doctor', 'secretary'],
         require: true,
         default: 'patient'
     },
@@ -49,13 +49,13 @@ const userSchema= new Schema ({
     },
     facebookID: String,
     facebookAccessToken: String,
-},{
-    timestamps: {
-        createdAt: "created_at",
-        updatedAt: "updated_at"
-    }
-});
+}, {
+        timestamps: {
+            createdAt: "created_at",
+            updatedAt: "updated_at"
+        }
+    });
 
-userSchema.plugin(passportLocalMongoose, { usernameField: 'email'}); // Username Field specified that we're going to use "email" as the "username" for logging in
+userSchema.plugin(passportLocalMongoose, { usernameField: 'email' }); // Username Field specified that we're going to use "email" as the "username" for logging in
 
 module.exports = mongoose.model("User", userSchema);

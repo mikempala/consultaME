@@ -1,5 +1,5 @@
 const express = require('express');
-const router  = express.Router();
+const router = express.Router();
 const passport = require("passport");
 const User = require("../models/User");
 const sgMail = require('@sendgrid/mail');
@@ -60,7 +60,10 @@ router.post("/register", (req, res) => {
 
       res.render("index", { msg: `Por favor confirma tu cuenta. Un link se ha enviado a ${email}` });
     })
-    .catch(err => console.log(err));
+    .catch(() => {
+      res.status(500);
+      res.render('error');
+    })
 });
 
 // Facebook register

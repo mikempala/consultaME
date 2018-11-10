@@ -12,7 +12,7 @@ const passport     = require('./helpers/passport');
 const session      = require('express-session');
 
 mongoose
-  .connect(process.env.MONGODB_URI, {useNewUrlParser: true})
+  .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -26,9 +26,9 @@ const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.
 const app = express();
 
 app.use(session({
-    secret: process.env.SECRET,
-    resave: true,
-    saveUninitialized: true
+  secret: process.env.SECRET,
+  resave: true,
+  saveUninitialized: true
 }));
 
 app.use(passport.initialize());
@@ -43,11 +43,11 @@ app.use(cookieParser());
 // Express View engine setup
 
 app.use(require('node-sass-middleware')({
-  src:  path.join(__dirname, 'public'),
+  src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
   sourceMap: true
 }));
-      
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');

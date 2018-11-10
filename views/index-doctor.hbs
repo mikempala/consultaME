@@ -5,28 +5,28 @@
         <div class="col-xl-8 col-lg-8 col-md-4 col-sm-12 col-12 pt-5 boxShadow">
             <h3>Citas Existentes:</h3>
             {{#each appointments}}
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Rol</th>
-                            <th scope="col">Acción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">{{_client.name}} {{_client.surname}}</th>
-    <!--no esta mandando role-->
-                            <td  >{{role}}</td>
-                            <!--agregar if-->
-                            <td scope="col">
-                                <a class="btn btn-danger"  role="button" href="/doctor/citas/{{_id}}/delete">Borrar</a>
-                                <a class="btn btn-success"  role="button"  href="/doctor/citas/{{_id}}">Editar </a>
-                                <a class="btn btn-primary"  role="button"  href="/doctor/citas/{{_id}}/prescripcion">Agregar Prescripcion</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre del Paciente</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">{{_client.name}} {{_client.surname}}</th>
+                        <td>{{date}}</td>
+                        <!--agregar if-->
+                        <td scope="col">
+                            <a class="btn btn-success" role="button" href="/doctor/citas/{{_id}}">Editar </a>
+                            <a class="btn btn-primary" role="button" href="/doctor/citas/{{_id}}/prescripcion">Agregar
+                                Prescripcion</a>
+                            <a class="btn btn-danger" role="button" href="/doctor/citas/{{_id}}/delete">Borrar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
             {{/each}}
         </div>
         <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12  ">
@@ -35,6 +35,5 @@
 </div>
 
 <script>
-    var session=true;
+    var session = true;
 </script>
-

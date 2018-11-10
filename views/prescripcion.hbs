@@ -5,25 +5,28 @@
         <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12   ">
         </div>
         <div class="col-xl-10 col-lg-10 col-md-4 col-sm-12 col-12   ">
-        <h1 class="tit-txt-expediente"  >Expediente</h1>
+            <h1 class="tit-txt-expediente">Expediente</h1>
 
+            {{#if appointments}}
+            <li>
+                {{#each appointments}}
+                <ul><a href="/expediente/{{_id}}">{{date}}</a></ul>
+                {{/each}}
+            </li>
+            {{/if}}
 
-        <li>
-            {{#each appointments}}
-            <ul><a href="/expediente/{{_id}}">{{date}}</a></ul>
+            {{#each appointment}}
+            <h3>Prescripción:</h3>
+            <p>{{prescription}}</p>
+            <h3>Notas:</h3>
+            <p>{{notes}}</p>
             {{/each}}
-        </li>
 
-        {{#each appointment}}
-            <h2>Prescripción: </h2> <p>{{prescription}}</p>
-            <h2>Notas: </h2> <p>{{notes}}</p>
-        {{/each}}
+            <a href="/expediente">Regresar</a>
         </div>
     </div>
 </div>
 
-    <script>
-    var session=true;
+<script>
+    var session = true;
 </script>
-
-

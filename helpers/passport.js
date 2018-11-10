@@ -25,7 +25,7 @@ passport.use(
     },
 
     (accessToken, refreshToken, profile, done) => {
-      User.findOne({ facebookID: profile.id }, function(err, user) {
+      User.findOne({ facebookID: profile.id }, function (err, user) {
         if (err) {
           return done(err);
         }

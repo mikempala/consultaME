@@ -7,8 +7,8 @@
             <h3>Usuarios Existentes:</h3>
             {{#each users}}
 
-                <table class="table table-bordered">
-                    <thead>
+            <table class="table table-bordered">
+                <thead>
                     <tr>
 
                         <th scope="col">Nombre</th>
@@ -16,47 +16,47 @@
                         <th scope="col">Rol</th>
                         <th scope="col">Acciones</th>
                     </tr>
-                    </thead>
-                    <tbody>
+                </thead>
+                <tbody>
                     <tr>
                         <td>{{name}} {{surname}}</td>
                         <td>{{email}}</td>
                         <td>{{role}}</td>
                         <td>
-                            <a  class="btn btn-danger" href="/admin/perfil/delete/{{_id}}">Borrar</a>
-                            <a  class="btn btn-success" href="/admin/perfil/edit/{{_id}}">Editar</a>
-                            <a  class="btn btn-primary" href="/admin/citas/{{_id}}">Ver Citas</a>
+                            <a class="btn btn-danger" href="/admin/perfil/delete/{{_id}}">Borrar</a>
+                            <a class="btn btn-success" href="/admin/perfil/edit/{{_id}}">Editar</a>
+                            <a class="btn btn-primary" href="/admin/citas/{{_id}}">Ver Citas</a>
                         </td>
                     </tr>
-                    </tbody>
-                </table>
+                </tbody>
+            </table>
             {{/each}}
 
             <h3>Citas Existentes:</h3>
             {{#each appointments}}
-                <table>
-                    <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Fecha</th>
-                        <th scope="col">Descripción</th>
-                        <th scope="col">Acción</th>
+            <table>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Acción</th>
 
-                    </tr>
-                    <tr>
-                        <td>{{_client.name}} {{_client.surname}}</td>
-                        <td>{{date}}</td>
-                        <td>{{description}}</td>
-                        <td>
-                            <a class="btn btn-success"  href="/doctor/citas/{{_id}}/edit">Editar</a>
-                            <a class="btn btn-danger" href="/doctor/citas//{{_id}}/delete">Borrar</a>
-                        </td>
-                    </tr>
-                </table>
+                </tr>
+                <tr>
+                    <td>{{_client.name}} {{_client.surname}}</td>
+                    <td>{{date}}</td>
+                    <td>{{description}}</td>
+                    <td>
+                        <a class="btn btn-success" href="/doctor/citas/{{_id}}/edit">Editar</a>
+                        <a class="btn btn-danger" href="/doctor/citas//{{_id}}/delete">Borrar</a>
+                    </td>
+                </tr>
+            </table>
             {{/each}}
 
 
         </div>
-            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12  ">
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12  ">
 
         </div>
     </div>
@@ -64,6 +64,5 @@
 
 
 <script>
-    var session=true;
+    var session = true;
 </script>
-

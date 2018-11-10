@@ -1,67 +1,77 @@
 <!doctype html>
 <html lang="Login">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto:500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/style.css">
     <title>Login</title>
 </head>
+
 <body>
 
-<nav id='nav' class="navbar navbar-light navbar-expand-lg  shadow-lg p-3  bg-white rounded sticky-top" >
-    <a class="navbar-brand" id="linkhome" title="ConsultaME" href="/">
-        <img  src="https://res.cloudinary.com/consultame/image/upload/v1541678575/img/logos/logo_consultame-03.png"  class="mx-auto img-fluid" alt="" width="70" height="90" />
-    </a>
-    <button class="navbar-toggler" style="color: black" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" ></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active ">
-                <a class="nav-link txtNavbar  activa " id="linkIndex" href="/"  style="color: #3BD0AB">  Inicio  </a>
-            </li>
-            <li class="nav-item active ">
-                <a class="nav-link active  txtNavbar  " id="linkCita"  href="#servicios"   >  Servicios</a>
-            </li>
-            <li class="nav-item active ">
-                <a class="nav-link active txtNavbar  " id="linkCita"  href="#comoFun" >  ¿Cómo funciona?</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link  txtNavbar  " id="linkPerfil" href="#conta" > Contáctanos     </a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link  txtNavbar  " id="linkPerfil" href="#faq" > FAQ     </a>
-            </li>
-        </ul>
-        <ul class="ml-auto my-2 my-lg-0"  style="list-style: none" >
-            <li class="nav-item ">
-                <button id="login" type="button" title="Ingresar" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-                    <i class="fas fa-user fa-2x"></i>
-                </button>
-            </li>
-        </ul>
-        <ul class="mr-auto my-2 my-lg-0 hide" style="list-style: none" id="logout"    >
-            <li class="nav-item ">
-                <form action="/logout" method="post">
-                    <button type="submit" title="Salir" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
-                        <i class="fas fa-running fa-2x"></i>
+    <nav id='nav' class="navbar navbar-light navbar-expand-lg  shadow-lg p-3  bg-white rounded sticky-top">
+        <a class="navbar-brand" id="linkhome" title="ConsultaME" href="/">
+            <img src="https://res.cloudinary.com/consultame/image/upload/v1541678575/img/logos/logo_consultame-03.png"
+                class="mx-auto img-fluid" alt="" width="70" height="90" />
+        </a>
+        <button class="navbar-toggler" style="color: black" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active ">
+                    <a class="nav-link txtNavbar  activa " id="linkIndex" href="/" style="color: #3BD0AB"> Inicio </a>
+                </li>
+                <li class="nav-item active ">
+                    <a class="nav-link active  txtNavbar  " id="linkCita" href="#servicios"> Servicios</a>
+                </li>
+                <li class="nav-item active ">
+                    <a class="nav-link active txtNavbar  " id="linkCita" href="#comoFun"> ¿Cómo funciona?</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link  txtNavbar  " id="linkPerfil" href="#conta"> Contáctanos </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link  txtNavbar  " id="linkPerfil" href="#faq"> FAQ </a>
+                </li>
+            </ul>
+            <ul class="ml-auto my-2 my-lg-0" style="list-style: none">
+                <li class="nav-item ">
+                    <button id="login" type="button" title="Ingresar" class="btn btn-success" data-toggle="modal"
+                        data-target="#exampleModal">
+                        <i class="fas fa-user fa-2x"></i>
                     </button>
-                </form>
-            </li>
-        </ul>
-    </div>
-</nav>
+                </li>
+            </ul>
+            <ul class="mr-auto my-2 my-lg-0 hide" style="list-style: none" id="logout">
+                <li class="nav-item ">
+                    <form action="/logout" method="post">
+                        <button type="submit" title="Salir" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                            <i class="fas fa-running fa-2x"></i>
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-{{{body}}}
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    {{{body}}}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
-<script src="javascripts/script.js"></script>
+    <script src="javascripts/script.js"></script>
 </body>
+
 </html>

@@ -14,7 +14,10 @@ router.get('/', commonMiddlewares.isDoctor, (req, res, next) => {
     .then(appointments => {
       res.render('index-doctor', { appointments });
     })
-    .catch(err => console.log(err));
+    .catch(() => {
+      res.status(500);
+      res.render('error');
+    })
 });
 
 // Form used to edit appointments
@@ -23,10 +26,9 @@ router.get("/citas/:id", commonMiddlewares.isDoctor, (req, res) => {
     .then(appointment => {
       res.render("appointment-form", { appointment })
     })
-    .catch(err => {
+    .catch(() => {
       res.status(500);
       res.render('error');
-      console.log(err);
     })
 });
 
@@ -35,23 +37,21 @@ router.post("/citas/:id/edit", commonMiddlewares.isDoctor, (req, res) => {
     .then(() => {
       res.redirect('/doctor');
     })
-    .catch(err => {
+    .catch(() => {
       res.status(500);
       res.render('error');
-      console.log(err);
     })
 });
 
-// Delets appointment
+// Deletes appointment
 router.get("/citas/:id/delete", commonMiddlewares.isDoctor, (req, res) => {
   Appointment.findByIdAndDelete(req.params.id)
     .then(() => {
       res.redirect('/doctor');
     })
-    .catch(err => {
+    .catch(() => {
       res.status(500);
       res.render('error');
-      console.log(err);
     })
 });
 
@@ -71,10 +71,9 @@ router.post('/citas/:id/prescripcion/new', commonMiddlewares.isDoctor, (req, res
   .then(() => {
     res.redirect("/doctor");
   })
-  .catch(err => {
+  .catch(() => {
     res.status(500);
     res.render('error');
-    console.log(err);
   });
 });
 
