@@ -65,9 +65,12 @@ const index = require('./routes/index');
 const perfil = require('./routes/perfil');
 const cita = require('./routes/cita');
 const admin = require('./routes/admin');
+const doctor = require('./routes/doctor');
+
 app.use('/', index);
 app.use('/perfil', perfil);
 app.use('/cita', cita);
 app.use('/admin', admin);
+app.use('/doctor', doctor);
 
 module.exports = app;

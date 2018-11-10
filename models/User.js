@@ -8,7 +8,7 @@ const userSchema= new Schema ({
         require: true,
         unique: true
     },
-    rol: {
+    role: {
         type: String,
         enum: ['admin','patient','doctor','secretary'],
         require: true,

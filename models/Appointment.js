@@ -1,4 +1,5 @@
 const mongoose = require ('mongoose');
+const ObjectId = mongoose.Types.ObjectId;
 const Schema = mongoose.Schema;
 
 const appointmentSchema = new Schema({
@@ -9,7 +10,8 @@ const appointmentSchema = new Schema({
    },
    _doctor: {
        type: Schema.Types.ObjectId,
-       ref: "User"
+       ref: "User",
+       default: ObjectId("5be4e61e6822f694724b9282")
    },
     date: {
        type: Date,

@@ -1,4 +1,5 @@
 <h3>Existing users:</h3>
+{{#each users}}
 <table>
   <tr>
     <th>Name</th>
@@ -6,26 +7,32 @@
     <th>Role</th>
     <th>Actions</th>
   </tr>
-
-  {{#each users}}
   <tr>
     <th>{{name}} {{surname}}</th>
     <th>{{email}}</th>
     <th>{{role}}</th>
     <th><a href="/admin/perfil/delete/{{_id}}">Delete</a></th>
     <th><a href="/admin/perfil/edit/{{_id}}">Edit</a></th>
-    <th><a href="/admin/perfil/citas/{{_id}}">View Appointments</a></th>
+    <th><a href="/admin/citas/{{_id}}">View Appointments</a></th>
   </tr>
-  {{/each}}
-
-  {{#each appointments}}
-  <tr>
-    <th>{{requester}}</th>
-    <th>{{doctor}}</th>
-    <th>{{role}}</th>
-    <th><a href="/admin/perfil/delete/{{_id}}">Delete</a></th>
-    <th><a href="/admin/perfil/edit/{{_id}}">Edit</a></th>
-    <th><a href="/admin/perfil/citas/{{_id}}">View Appointments</a></th>
-  </tr>
-  {{/each}}
 </table>
+{{/each}}
+
+<h3>Existing appointments:</h3>
+{{#each appointments}}
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Description</th>
+    <th>Actions</th>
+  </tr>
+  <tr>
+    <th>{{_client.name}} {{_client.surname}}</th>
+    <th>{{date}}</th>
+    <th>{{description}}</th>
+    <th><a href="/doctor/citas/{{_id}}/edit">Edit</a></th>
+    <th><a href="/doctor/citas//{{_id}}/delete">Delete</a></th>
+  </tr>
+</table>
+{{/each}}

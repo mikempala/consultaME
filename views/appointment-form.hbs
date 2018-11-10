@@ -1,0 +1,17 @@
+  <form action="/doctor/citas/{{appointment._id}}/edit" method="post">
+    <div>
+        <label for="">
+            Date:
+            <input type="datetime-local" name="date" value="{{appointment.date}}">
+        </label>
+    </div>
+
+    <div>
+        <label for="">
+            Description:
+            <input type="text" name="description" value="{{appointment.description}}">
+        </label>
+    </div>
+
+    <button type="submit">Edit</button>
+</form>
