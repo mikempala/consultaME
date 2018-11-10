@@ -15,7 +15,7 @@ router.get("/confirm/:id", (req, res) => {
 
 // Displays the user's profile
 router.get("/", commonMiddlewares.isLoggedIn, (req, res) => {
-  let user = req.user;
+  let { user } = req;
   let birthday = moment(req.body.birthday).utc().format("YYYY-MM-DD");
 
   res.render("perfil", { user, birthday });
@@ -23,7 +23,7 @@ router.get("/", commonMiddlewares.isLoggedIn, (req, res) => {
 
 // Edit profile
 router.post("/edit", commonMiddlewares.isLoggedIn, upload.single('profile_pic'), (req, res) => {
-  req.body.profile_pic = req.file.url // Uploads the image and updates the user's photo
+  if (req.body.profile_pic) req.body.profile_pic = req.file.url // Uploads the image and updates the user's photo
 
   User.findByIdAndUpdate(req.user._id, { $set: req.body })
   .then(() => {

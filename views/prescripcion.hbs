@@ -1,0 +1,13 @@
+<h1>Expediente</h1>
+
+
+<li>
+    {{#each appointments}}
+    <ul><a href="/expediente/{{_id}}">{{date}}</a></ul>
+    {{/each}}
+</li>
+
+{{#each appointment}}
+    <h2>Prescripción: </h2> <p>{{prescription}}</p>
+    <h2>Notas: </h2> <p>{{notes}}</p>
+{{/each}}

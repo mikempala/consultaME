@@ -64,12 +64,14 @@ app.locals.title = 'consultaME';
 const index = require('./routes/index');
 const perfil = require('./routes/perfil');
 const cita = require('./routes/cita');
-const admin = require('./routes/admin');
 const doctor = require('./routes/doctor');
+const admin = require('./routes/admin');
+const expediente = require('./routes/expediente');
 
 app.use('/', index);
 app.use('/perfil', perfil);
 app.use('/cita', cita);
+app.use('/expediente', expediente);
 app.use('/admin', admin);
 app.use('/doctor', doctor);
 

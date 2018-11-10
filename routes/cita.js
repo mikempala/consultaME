@@ -2,10 +2,11 @@ const express = require('express');
 const router  = express.Router();
 const Appointment = require("../models/Appointment");
 const commonMiddlewares = require("../helpers/commonMiddlewares");
+const ObjectId = require('mongoose').Types.ObjectId;
 
-// Displays all appointments
+// Displays the user's appointments
 router.get("/", commonMiddlewares.isLoggedIn, (req, res) => {
-  Appointment.find()
+  Appointment.find({"_client": ObjectId(req.user._id)})
   .then((appointments) => {
     res.render("cita", { appointments });
   })
