@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f77d3c7c-d352-4660-9636-2ed13e4f3184" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/appointment-form.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/appointment-form.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/confirm.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/confirm.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index-admin.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index-admin.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index-doctor.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index-doctor.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/prescripcion-form.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/prescripcion-form.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/prescripcion.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/prescripcion.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.hbs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,12 +36,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="8" />
+          <entry key="css" value="9" />
           <entry key="dev" value="1" />
           <entry key="env" value="7" />
-          <entry key="hbs" value="65" />
+          <entry key="hbs" value="70" />
           <entry key="html" value="20" />
-          <entry key="js" value="38" />
+          <entry key="js" value="39" />
           <entry key="jsp" value="5" />
           <entry key="map" value="1" />
           <entry key="scss" value="1" />
@@ -53,11 +49,11 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="8" />
+          <entry key="CSS" value="9" />
           <entry key="HTML" value="20" />
-          <entry key="Handlebars/Mustache" value="65" />
+          <entry key="Handlebars/Mustache" value="70" />
           <entry key="JSP" value="5" />
-          <entry key="JavaScript" value="38" />
+          <entry key="JavaScript" value="39" />
           <entry key="PLAIN_TEXT" value="8" />
           <entry key="SCSS" value="1" />
           <entry key="SourceMap" value="1" />
@@ -65,19 +61,19 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="650" />
+          <entry key="css" value="651" />
           <entry key="dev" value="41" />
           <entry key="env" value="16" />
-          <entry key="hbs" value="3083" />
+          <entry key="hbs" value="3206" />
           <entry key="html" value="2889" />
           <entry key="js" value="2128" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="650" />
+          <entry key="CSS" value="651" />
           <entry key="HTML" value="2889" />
-          <entry key="Handlebars/Mustache" value="3083" />
+          <entry key="Handlebars/Mustache" value="3206" />
           <entry key="JavaScript" value="2128" />
           <entry key="PLAIN_TEXT" value="57" />
         </counts>
@@ -86,11 +82,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="15" column="9" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="15" selection-end-column="9" />
+            <state relative-caret-position="93">
+              <caret line="312" column="49" selection-start-line="312" selection-start-column="49" selection-end-line="312" selection-end-column="49" />
+              <folding>
+                <element signature="e#15085#15091#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/layout.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="51" column="23" lean-forward="true" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -105,15 +113,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/perfil.hbs">
+        <entry file="file://$PROJECT_DIR$/views/prescripcion-form.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="52" />
+            <state relative-caret-position="146">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="80" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/prescripcion.hbs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="713">
@@ -122,12 +133,56 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index-admin.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/cita.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="113">
+              <caret line="75" column="6" lean-forward="true" selection-start-line="74" selection-end-line="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-186" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="128" column="1" lean-forward="true" selection-start-line="128" selection-start-column="1" selection-end-line="128" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/appointment-form.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="31">
+              <caret line="4" column="72" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="135" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dividing</find>
-      <find>warni</find>
       <find>búsq</find>
       <find>user</find>
       <find>cont</find>
@@ -156,6 +211,8 @@
       <find>&lt;th&gt;</find>
       <find>&lt;/th&gt;</find>
       <find>Delete</find>
+      <find>sty</find>
+      <find>clo</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;h5 class=&quot;txTitCaro&quot;</replace>
@@ -199,15 +256,15 @@
         <option value="$PROJECT_DIR$/views/cita.hbs" />
         <option value="$PROJECT_DIR$/views/not-found.hbs" />
         <option value="$PROJECT_DIR$/public/javascripts/script.js" />
-        <option value="$PROJECT_DIR$/views/index.hbs" />
         <option value="$PROJECT_DIR$/views/confirm.hbs" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/views/index-doctor.hbs" />
         <option value="$PROJECT_DIR$/views/prescripcion.hbs" />
         <option value="$PROJECT_DIR$/views/appointment-form.hbs" />
-        <option value="$PROJECT_DIR$/views/layout.hbs" />
         <option value="$PROJECT_DIR$/views/prescripcion-form.hbs" />
         <option value="$PROJECT_DIR$/views/index-admin.hbs" />
+        <option value="$PROJECT_DIR$/views/layout.hbs" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
+        <option value="$PROJECT_DIR$/views/index.hbs" />
       </list>
     </option>
   </component>
@@ -332,12 +389,12 @@
       <workItem from="1541727605608" duration="12935000" />
       <workItem from="1541788632724" duration="3011000" />
       <workItem from="1541814800077" duration="15928000" />
-      <workItem from="1541838323913" duration="7352000" />
+      <workItem from="1541838323913" duration="8476000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121286000" />
+    <option name="totallyTimeSpent" value="122410000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,7 +423,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5003723" side_tool="true" weight="0.32649255" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4996277" weight="0.3513011" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4996277" visible="true" weight="0.35074627" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -538,23 +595,11 @@
         <state relative-caret-position="-465" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="8" selection-start-line="8" selection-end-line="31" selection-end-column="3" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-321" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/confirm.hbs">
@@ -564,30 +609,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/appointment-form.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-248">
-          <caret line="4" column="72" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="135" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/error.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/prescripcion-form.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="6" column="80" selection-start-line="6" selection-start-column="80" selection-end-line="6" selection-end-column="80" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -605,44 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1333">
-          <caret line="66" column="7" lean-forward="true" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index-admin.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-834">
-          <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/cita.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="74" selection-start-line="74" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index-doctor.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="4" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/perfil.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -654,6 +641,76 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="713">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-186" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index-doctor.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="4" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/appointment-form.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="4" column="72" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/prescripcion-form.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="80" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/cita.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="75" column="6" lean-forward="true" selection-start-line="74" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index-admin.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="51" column="23" lean-forward="true" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="128" column="1" lean-forward="true" selection-start-line="128" selection-start-column="1" selection-end-line="128" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="312" column="49" selection-start-line="312" selection-start-column="49" selection-end-line="312" selection-end-column="49" />
+          <folding>
+            <element signature="e#15085#15091#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
