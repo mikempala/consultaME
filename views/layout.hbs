@@ -13,8 +13,8 @@
 </head>
 <body>
 
-<nav id='nav' class="navbar navbar-light navbar-expand-lg   shadow-lg p-3 mb-5 bg-white  rounded sticky-top" >
-    <a class="navbar-brand  " id="linkhome" title="Grillos" href="">
+<nav id='nav' class="navbar navbar-light navbar-expand-lg  shadow-lg p-3  bg-white rounded sticky-top" >
+    <a class="navbar-brand" id="linkhome" title="ConsultaME" href="/">
         <img  src="https://res.cloudinary.com/consultame/image/upload/v1541678575/img/logos/logo_consultame-03.png"  class="mx-auto img-fluid" alt="" width="70" height="90" />
     </a>
     <button class="navbar-toggler" style="color: black" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,16 +40,18 @@
         </ul>
         <ul class="ml-auto my-2 my-lg-0"  style="list-style: none" >
             <li class="nav-item ">
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" title="Ingresar" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
                     <i class="fas fa-user fa-2x"></i>
                 </button>
             </li>
         </ul>
-        <ul class="mr-auto my-2 my-lg-0 hide" id="logout"   >
+        <ul class="mr-auto my-2 my-lg-0 hide" style="list-style: none" id="logout"    >
             <li class="nav-item ">
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
-                    <i class="fas fa-running fa-2x"></i>
-                </button>
+                <form action="/logout" method="post">
+                    <button type="submit" title="Salir" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fas fa-running fa-2x"></i>
+                    </button>
+                </form>
             </li>
         </ul>
     </div>

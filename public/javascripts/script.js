@@ -22,7 +22,7 @@ $(function() {
         $(this).addClass("activa");
     });
 
-    if (page=='perfil'){
+    if (session==true){
         console.log('esta en la pagina perfil');
         $("#logout").removeClass('hide');
     }

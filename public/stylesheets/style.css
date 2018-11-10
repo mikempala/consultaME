@@ -81,3 +81,21 @@ body{
 .hide{
   display: none;
 }
+
+.background-calendar{
+    background-image: url('https://res.cloudinary.com/consultame/image/upload/v1541826645/img/fondos/calendars.png');
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+}
+
+.background-calendar:before{
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(59, 208, 171, 0.8);
+    top: 0;
+    left: 0 ;
+}

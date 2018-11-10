@@ -138,7 +138,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="background-color:#3BD0AB">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="home" aria-selected="true">Acceder</a>
@@ -147,11 +147,9 @@
                         <a class="nav-link" id="contact-tab" data-toggle="tab" href="#register" role="tab" aria-controls="contact" aria-selected="false">Registrar</a>
                     </li>
                 </ul>
-                <div class="tab-content" id="myTabContent">
+                <div class="tab-content" id="myTabContent" >
                     <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-
-                        <img  src="https://res.cloudinary.com/consultame/image/upload/v1541678575/img/logos/logo_consultame-02.png"  class="mx-auto img-fluid" alt="" width="193" height="106" />
-
+                        <img  src="https://res.cloudinary.com/consultame/image/upload/v1541678575/img/logos/logo_consultame-01.png"  class="img-thumbnail rounded mx-auto d-block" alt="" width="193" height="106" />
                         <form action="/login" method="post">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Correo</label>
@@ -162,88 +160,86 @@
                                 <label for="exampleInputPassword1">Contraseña</label>
                                 <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
                             </div>
-                            <button type="submit" class="btn btn-primary">Acceder</button>
+                            <button type="submit" class="btn btn-primary">Entrar</button>
                         </form>
                     </div>
                     <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
                         <i class="fab fa-wpforms fa-3x"></i>
                         <form  action="/register" method="post">
-                            <h4 class="ui dividing header " style="color: grey "> Información cuenta</h4>
-                            <div  >
-                                <label for="">
-                                    Email:
+                            <h4 class="ui dividing header " style="color: grey "> Información de la cuenta</h4>
+                            <div>
+                                <label for="" class="text-white">
+                                    Correo:
                                     <input type="email" name="email">
                                 </label>
 
                                 <div>
-                                    <label for="">
-                                        Password:
+                                   <label for="" class="text-white">
+                                        Contraseña:
                                         <input type="password" name="password">
                                     </label>
                                 </div>
                                 <div>
-                                    <label for="">
-                                        Confirm password:
+                                   <label for="" class="text-white">
+                                        Confirmar Contraseña:
                                         <input type="password" name="confirmPassword">
                                     </label>
                                 </div>
                             </div>
                             <h4  style="color: grey"> Información personal</h4>
-                            <div  >
-                                <div  >
-                                    <label for="">
-                                        name:
+                            <div>
+                                <div>
+                                   <label for="" class="text-white">
+                                        Nombre:
                                         <input type="text" name="name">
                                     </label>
                                 </div>
-                                <div  >
-                                    <label for="">
-                                        surname:
+                                <div>
+                                   <label for="" class="text-white">
+                                        Apellidos:
                                         <input type="text" name="surname">
                                     </label>
                                 </div>
                             </div>
-
-                            <div  >
-                                <label for="">
-                                    birthday:
+                            <div>
+                               <label for="" class="text-white">
+                                    Cumpleaños:
                                     <input type="date" name="birthday">
                                 </label>
                             </div>
-                            <div  >
-                                <label for="">
-                                    telephone:
+                            <div>
+                               <label for="" class="text-white">
+                                    Teléfono:
                                     <input type="number" name="telephone">
                                 </label>
                             </div>
-
-                            <div  >
-                                <label for="">
-                                    street:
+                            <div>
+                               <label for="" class="text-white">
+                                    Calle:
                                     <input type="text" name="street">
                                 </label>
                             </div>
                             <div>
-                                <label for="">
-                                    district:
+                               <label for="" class="text-white">
+                                    Colonia:
                                     <input type="text" name="district">
                                 </label>
                             </div>
                             <div>
-                                <label for="">
-                                    city:
+                               <label for="" class="text-white">
+                                    Ciudad:
                                     <input type="text" name="city">
                                 </label>
                             </div>
                             <div>
-                                <label for="">
-                                    state:
+                               <label for="" class="text-white">
+                                    Estado:
                                     <input type="text" name="state">
                                 </label>
                             </div>
                             <div>
-                                <label for="">
-                                    zip_code:
+                               <label for="" class="text-white">
+                                    Código Postal:
                                     <input type="number" name="zip_code">
                                 </label>
                             </div>
