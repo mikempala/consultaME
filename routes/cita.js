@@ -26,7 +26,6 @@ router.post("/new", commonMiddlewares.isLoggedIn, (req, res) => {
   Appointment.create({ _client, date, description })
     .then(() => {
       res.redirect("/cita");
-      console.log(`Se creo cita ${appointment}`);
     })
     .catch(() => {
       res.status(500);

@@ -31,7 +31,7 @@ router.get("/", commonMiddlewares.isLoggedIn, (req, res) => {
 
 // Edit profile
 router.post("/edit", commonMiddlewares.isLoggedIn, upload.single('profile_pic'), (req, res) => {
-  if (req.body.profile_pic) req.body.profile_pic = req.file.url // Uploads the image and updates the user's photo
+  if (req.body.profile_pic) req.body.profile_pic = req.file.url; // Uploads the image and updates the user's photo
 
   User.findByIdAndUpdate(req.user._id, { $set: req.body })
     .then(() => {
